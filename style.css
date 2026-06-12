@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+/* Resets + base style*/
+
+h1{
+    margin: 0;
+    font-family: sans-serif;
+    color: white;
+}
+
+p{
+    margin: 0;
+    font-family: sans-serif;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    margin: 0;
+    background-color: black;
+}
+
+/* Page setup */
+
+.center{
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.box{
+    border: 1.5px solid white;
+    width: 130px;
+    height: 130px;
+}
+
+/* Design */
+
+h1{
+    font-family: 'Open Sans', sans-serif;
+    font-style: bold;
+    padding-top: .4em;
+}
+
+p{
+    font-family: 'Open Sans', sans-serif;
+    font-style: italic;
+    font-size: 1.5rem;
+}
+
+.box h1,p{
+    padding-left: .8em;
+}
+
+/* Animation setup WIP */
+
+.invis{
+    opacity: 0;
+    font-size: .9rem;
+    font-style: italic;
+    grid-area: z1;
+}
+
+.box:hover{
+    width: 40vw;
+    transition-property: width;
+    transition-duration: .3s;
+
+    /* New display mode for the anim */
+    display: grid;
+    grid-template-columns: 1fr  1fr  1fr;
+    grid-template-areas: "x y z"
+                        "x1 y1 z1"
+                        "x2 y2 z2";
+    grid-template-rows: 1fr  1fr  1fr;
+    align-items: start;
+}
+
+.box{
+    transition-property: width;
+    transition-duration: .3s;
+}
+
+.box:hover .left-j1{
+    grid-area: x;
+} 
+
+.box:hover .left-j2{
+    grid-area: x1;
+}
+
+.box:hover .left-j3{
+    grid-area: x2;
+    margin-bottom: 1em;
+}
+
+
+.box:hover .invis{
+    opacity: 100%;
+    transition-property: opacity;
+    transition-duration: 1s;
+}
+
+.box:hover .button{
+    grid-area: y1;
+    text-align: center;
+    align-self: center;
+    padding: 0;
+
+/* Alternative style */
+/*     font-style: normal;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: .75rem; */
+}
+
+
+/* .copy{
+    font-size: 0rem;
+}
+
+.box:hover .copy{
+    transition-property: opacity font-size;
+    transition-duration: 3s,5s;
+
+    font-size: .9rem;
+} */
+
+/* Couldn't figure out how to prevent copy text from breaking grid row height during the animation */
