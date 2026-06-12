@@ -1,0 +1,192 @@
+@charset "utf-8"; 
+
+/* Document styling */
+
+:root{
+    --bs-primary: #3529d0;
+    --bs-primary-rgb: 53, 41, 208;
+}
+
+.heading{
+    color: white;
+} /* h1 Bootstrap override */
+
+.ending{
+    color: #3529d0;
+    background-color: white;
+/*     height: 100vh; */
+    padding-top: 3rem;
+    padding-bottom: 0em;
+} /* Refers to CTA "Make your trading easier" */
+
+.centered{
+    text-align: center;
+} /* Centered headings in the CTA */
+
+body{
+    color:white;
+}
+
+.row{
+    padding-bottom:  9rem;
+    margin-right: 0;
+}
+
+/* Styling of video and first (blue) container */
+
+.stickyvideo{
+    position: sticky;
+    top: 0;
+/*     margin-top: -100; */
+    min-height: 100vh;
+/*     background-color: maroon; */
+} /* Had a lot of trouble figuring this out */
+
+.introvideo{
+/*     position: sticky;
+    top: 10rem; */
+    max-width: 100%;
+/*      width: 100vw;
+    height: 100vh;  */
+/*     aspect-ratio: 16 / 9; */
+    z-index: 1;
+    margin-top: -100px;
+/*     padding-bottom: 50rem; */
+} /* Trying random stuff + praying a little */
+
+.container-fluid{
+    position: sticky;
+    background-color: #3529d0;
+    max-width: 100vw;
+    z-index: 2;
+    padding: 0;
+    margin: 0;
+}
+
+.center{
+    max-width: 60vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 5rem;
+}
+
+.ending{
+    position: sticky;
+    z-index: 3;
+}
+
+.mockup{
+    margin-top: -1.7rem;
+    max-width: 40rem;
+}
+
+.logo{
+    position: fixed;
+    top: 1rem;
+
+    margin-left: 2rem;
+    max-width: 100px;
+    z-index: 20;
+}
+
+/* Styling of content within (blue) container */
+
+.orders{
+    max-width: 21em;
+    margin-left: 8em;
+    margin-right: auto;
+    
+}
+
+.news{
+    max-width: 16em;
+    margin-left: 4em;
+    margin-right: 3em;
+}
+
+/* Styling of second (ending) container content */
+
+.trading{
+    margin-top: .8em;
+}
+
+/* Responsive layout */
+
+@media (max-width: 1150px){
+    .row{
+        display: block;
+        padding-bottom: 5rem;
+    }
+    
+    h1{
+        padding-top: 1em;
+    }
+
+    .orders{
+        margin-left: 5em;
+        max-width: 18em;
+        padding-bottom: 5rem;
+    }
+
+    .news{
+        max-width: 14em;
+        margin-left: 7em;
+    }
+
+    .mockup{
+        max-width: 30em;
+    }
+
+    .cardwrapper>.col-sm{
+        margin-top: 3em;
+    }
+}
+
+/* Cards */
+
+.cardstart{
+    margin-top: 5em;
+    text-align: center;
+}
+
+.card{
+    max-width: 20em;
+    margin-left: auto;
+    margin-right: auto;
+    min-height: 484px;
+}
+
+.tier{
+    max-width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cardwrapper{
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 3em;
+}
+
+.card-title{
+    text-align: center;
+    padding-top: .5em;
+}
+
+.card-body>a{
+    margin-top: 1em;
+
+}
+
+.card-header{
+    margin-top: 1.5em;
+}
+
+.card-title{
+    font-size: 1.8em;
+}
+
+li{
+    text-align: left;
+}
